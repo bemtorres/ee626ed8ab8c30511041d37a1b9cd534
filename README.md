@@ -85,3 +85,11 @@ MessageDigest md = null;
         }
 
 ```
+
+
+**Sha256**
+
+http://md5decrypt.net/en/Sha256/#answer 
+
+**SHA512**
+http://md5decrypt.net/en/Sha512/
