@@ -1,8 +1,8 @@
 # ee626ed8ab8c30511041d37a1b9cd534
 
 
-
-
+C#
+```
 using System;
 using System.Text;
 using System.Security.Cryptography;
@@ -41,3 +41,47 @@ namespace CodeShare.Cryptography
 
     }
 }
+```
+
+Java
+```
+MessageDigest md = null;
+	String password = "primero";
+        try {
+            
+            //SHA-512
+            md= MessageDigest.getInstance("SHA-512");
+            md.update(password.getBytes());
+            byte[] mb = md.digest();
+            System.out.println(Hex.encodeHex(mb));
+            
+            //SHA-384
+            md= MessageDigest.getInstance("SHA-384");
+            md.update(password.getBytes());
+            byte[] mb0 = md.digest();
+            System.out.println(Hex.encodeHex(mb0));
+            
+            //SHA-256
+            md= MessageDigest.getInstance("SHA-256");
+            md.update(password.getBytes());
+            byte[] mb1 = md.digest();
+            System.out.println(Hex.encodeHex(mb1));
+            
+            
+            //SHA-1
+            md= MessageDigest.getInstance("SHA-1");
+            md.update(password.getBytes());
+            mb = md.digest();
+            System.out.println(Hex.encodeHex(mb));
+            
+            //MD5
+            md= MessageDigest.getInstance("MD5");
+            md.update(password.getBytes());
+            mb = md.digest();
+            System.out.println(Hex.encodeHex(mb));
+            
+        } catch (NoSuchAlgorithmException e) {
+            //Error
+        }
+
+```
